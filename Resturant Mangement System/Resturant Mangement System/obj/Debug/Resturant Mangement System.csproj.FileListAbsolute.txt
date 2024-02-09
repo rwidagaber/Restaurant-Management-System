@@ -1,0 +1,17 @@
+D:\CAMELLIA\OOP\Resturant Mangement System\Resturant Mangement System\bin\Debug\Resturant Mangement System.exe.config
+D:\CAMELLIA\OOP\Resturant Mangement System\Resturant Mangement System\bin\Debug\Resturant Mangement System.exe
+D:\CAMELLIA\OOP\Resturant Mangement System\Resturant Mangement System\bin\Debug\Resturant Mangement System.pdb
+D:\CAMELLIA\OOP\Resturant Mangement System\Resturant Mangement System\obj\Debug\Resturant Mangement System.csproj.AssemblyReference.cache
+D:\CAMELLIA\OOP\Resturant Mangement System\Resturant Mangement System\obj\Debug\Resturant_Mangement_System.Properties.Resources.resources
+D:\CAMELLIA\OOP\Resturant Mangement System\Resturant Mangement System\obj\Debug\Resturant Mangement System.csproj.GenerateResource.cache
+D:\CAMELLIA\OOP\Resturant Mangement System\Resturant Mangement System\obj\Debug\Resturant Mangement System.csproj.CoreCompileInputs.cache
+D:\CAMELLIA\OOP\Resturant Mangement System\Resturant Mangement System\obj\Debug\Resturant Mangement System.exe
+D:\CAMELLIA\OOP\Resturant Mangement System\Resturant Mangement System\obj\Debug\Resturant Mangement System.pdb
+D:\CAMELLIA\OOP\Resturant Mangement System\Resturant Mangement System\bin\Debug\Guna.UI.dll
+D:\CAMELLIA\OOP\Resturant Mangement System\Resturant Mangement System\obj\Debug\Resturant Mangement System.csproj.CopyComplete
+D:\CAMELLIA\OOP\Resturant Mangement System\Resturant Mangement System\obj\Debug\Resturant_Mangement_System.HomeFrm.resources
+D:\CAMELLIA\OOP\Resturant Mangement System\Resturant Mangement System\obj\Debug\Resturant_Mangement_System.frmHome.resources
+D:\CAMELLIA\OOP\Resturant Mangement System\Resturant Mangement System\obj\Debug\Resturant_Mangement_System.SampleView.resources
+D:\CAMELLIA\OOP\Resturant Mangement System\Resturant Mangement System\obj\Debug\Resturant_Mangement_System.View.frmCategoryView.resources
+D:\CAMELLIA\OOP\Resturant Mangement System\Resturant Mangement System\obj\Debug\Resturant_Mangement_System.Model.frmCategoryAdd.resources
+D:\CAMELLIA\OOP\Resturant Mangement System\Resturant Mangement System\obj\Debug\Resturant_Mangement_System.SampleAdd.resources
