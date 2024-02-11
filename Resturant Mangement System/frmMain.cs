@@ -75,6 +75,7 @@ namespace Resturant_Mangement_System
         private void Productsbtn_Click(object sender, EventArgs e)
         {
             Btn_setting(sender, null);
+            AddControl(new View.frmProductView());
         }
 
         private void Tablesbtn_Click(object sender, EventArgs e)

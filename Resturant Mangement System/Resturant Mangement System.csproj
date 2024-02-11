@@ -84,6 +84,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RMDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RMDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SampleView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +111,18 @@
     </Compile>
     <Compile Include="View\frmCategoryView.Designer.cs">
       <DependentUpon>frmCategoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\frmProductAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmProductAdd.Designer.cs">
+      <DependentUpon>frmProductAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmProductView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmProductView.Designer.cs">
+      <DependentUpon>frmProductView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmStaffView.cs">
       <SubType>Form</SubType>
@@ -123,6 +145,9 @@
     <EmbeddedResource Include="Model\frmCategoryAdd.resx">
       <DependentUpon>frmCategoryAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmProductAdd.resx">
+      <DependentUpon>frmProductAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Model\frmStaffAdd.resx">
       <DependentUpon>frmStaffAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +157,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="SampleView.resx">
       <DependentUpon>SampleView.cs</DependentUpon>
@@ -141,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmCategoryView.resx">
       <DependentUpon>frmCategoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmProductView.resx">
+      <DependentUpon>frmProductView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmStaffView.resx">
       <DependentUpon>frmStaffView.cs</DependentUpon>
@@ -157,52 +186,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RMDatabaseDataSet.xsc">
+      <DependentUpon>RMDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RMDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RMDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RMDatabaseDataSet.xss">
+      <DependentUpon>RMDatabaseDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\logo\Homelogo.png" />
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\logo\HomelogoR.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\logo\categoriesLogoR.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\logo\ProductsLogoR.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\logo\TableLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\logo\staffLogoR.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\logo\POSLogoR.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\logo\KitchenLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\logo\reportLogoR.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\logo\settingLogoR.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\logo\exitLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\logo\maxLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\logo\MimLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\logo\categoriesLogo.png" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

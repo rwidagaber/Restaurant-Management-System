@@ -108,6 +108,7 @@ namespace Resturant_Mangement_System
             }
 
         }
+        //For scr 
         private static void gv_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             System.Windows.Forms.DataGridView gv = (System.Windows.Forms.DataGridView)sender;
@@ -118,5 +119,20 @@ namespace Resturant_Mangement_System
             }
 
         }
+        // for category comboBox
+        /*public static void CBFill(String qry,ComboBox cb)
+        {
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            cb.DisplayMember = "name";
+            cb.ValueMember = "id";
+            cb.DataSource = dataTable;
+            cb.SelectedIndex = -1;
+
+        }*/
+        
     }
 }
