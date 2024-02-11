@@ -47,6 +47,10 @@
             // 
             this.categoryView.AllowUserToAddRows = false;
             this.categoryView.AllowUserToDeleteRows = false;
+            this.categoryView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.categoryView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.categoryView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.categoryView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.categoryView.ColumnHeadersHeight = 50;
@@ -59,7 +63,7 @@
             this.dgvdel});
             this.categoryView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.categoryView.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.categoryView.Location = new System.Drawing.Point(12, 158);
+            this.categoryView.Location = new System.Drawing.Point(12, 157);
             this.categoryView.Name = "categoryView";
             this.categoryView.ReadOnly = true;
             this.categoryView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -69,10 +73,10 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
             this.categoryView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.categoryView.RowTemplate.Height = 24;
-            this.categoryView.Size = new System.Drawing.Size(776, 268);
+            this.categoryView.Size = new System.Drawing.Size(776, 269);
             this.categoryView.StandardTab = true;
             this.categoryView.TabIndex = 1;
-            this.categoryView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.categoryView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.categoryView_CellClick);
             // 
             // dgvSno
             // 
@@ -91,7 +95,6 @@
             this.dgvid.Name = "dgvid";
             this.dgvid.ReadOnly = true;
             this.dgvid.Visible = false;
-            this.dgvid.Width = 125;
             // 
             // dgvName
             // 
@@ -99,7 +102,6 @@
             this.dgvName.MinimumWidth = 6;
             this.dgvName.Name = "dgvName";
             this.dgvName.ReadOnly = true;
-            this.dgvName.Width = 125;
             // 
             // dgvedit
             // 
@@ -109,7 +111,6 @@
             this.dgvedit.MinimumWidth = 6;
             this.dgvedit.Name = "dgvedit";
             this.dgvedit.ReadOnly = true;
-            this.dgvedit.Visible = false;
             this.dgvedit.Width = 50;
             // 
             // dgvdel
@@ -125,14 +126,19 @@
             // frmCategoryView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.categoryView);
             this.Name = "frmCategoryView";
             this.Text = "frmCategoryView";
             this.Load += new System.EventHandler(this.frmCategoryView_Load);
+            this.Controls.SetChildIndex(this.btnAdd, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.txtSearch, 0);
             this.Controls.SetChildIndex(this.categoryView, 0);
             ((System.ComponentModel.ISupportInitialize)(this.categoryView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

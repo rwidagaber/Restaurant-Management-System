@@ -1,5 +1,6 @@
 ﻿using Resturant_Mangement_System.Model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace Resturant_Mangement_System.View
         }
         public void GetData()
         {
-            string qry = "Select * from category where catName like '"+txtSearch.Text+"' ";
+            string qry = "Select * from category where catName like '%"+txtSearch.Text+"%' ";
             ListBox listBox = new ListBox();
             listBox.Items.Add(dgvid);
             listBox.Items.Add(dgvName);
@@ -36,7 +37,6 @@ namespace Resturant_Mangement_System.View
             GetData();
         }
 
-        
         public override void btnAdd_Click(object sender, EventArgs e)
         {
             frmCategoryAdd frm = new frmCategoryAdd();
@@ -44,9 +44,29 @@ namespace Resturant_Mangement_System.View
             GetData();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
+        private void categoryView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (categoryView.CurrentCell.OwningColumn.Name == "dgvedit")
+            {
+                frmCategoryAdd frm=new frmCategoryAdd();
+                frm.id = Convert.ToInt32(categoryView.CurrentRow.Cells["dgvid"].Value);
+                frm.txtCatName.Text= Convert.ToString(categoryView.CurrentRow.Cells["dgvName"].Value);
+                frm.ShowDialog();
+                GetData();
+            }
+            else if(categoryView.CurrentCell.OwningColumn.Name == "dgvdel")
+            {
+                if (MessageBox.Show("Are you sure to delete this category? ", "Warnnig", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    int iD = Convert.ToInt32(categoryView.CurrentRow.Cells["dgvid"].Value);
+                    string qry = "Delete from category where catID= " + iD + "";
+                    Hashtable ht = new Hashtable();
+                    MainClass.SQl(qry, ht);
+                    MessageBox.Show("Category has been deleted Successfully..");
+                    GetData();
+                }
+            }
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using System.Collections;
 using System.Windows.Forms;
 using System.Drawing.Printing;
+using System.Drawing;
 
 namespace Resturant_Mangement_System
 {
@@ -16,7 +17,7 @@ namespace Resturant_Mangement_System
     {
         //connect to database
 
-        public static readonly string con_string = "Data Source=CAMELLIA;Initial Catalog=RMDatabase2;Integrated Security=True;TrustServerCertificate=True";
+        public static readonly string con_string = "Data Source=CAMELLIA;Initial Catalog=RMDatabase;Integrated Security=True;TrustServerCertificate=True";
         public static SqlConnection con=new SqlConnection(con_string);
 
         //Methode to check user validation
@@ -82,6 +83,7 @@ namespace Resturant_Mangement_System
 
         public static void LoadData(string qry,DataGridView gv,ListBox lb)
         {
+            gv.CellFormatting += new DataGridViewCellFormattingEventHandler(gv_CellFormatting);
             try
             {
                 SqlCommand cmd = new SqlCommand(qry, con);
@@ -103,6 +105,16 @@ namespace Resturant_Mangement_System
             {
                 MessageBox.Show(ex.ToString());
                 con.Close();
+            }
+
+        }
+        private static void gv_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            System.Windows.Forms.DataGridView gv = (System.Windows.Forms.DataGridView)sender;
+            int cnt = 0;
+            foreach (DataGridViewRow row in gv.Rows) {
+                cnt++;
+                row.Cells[0].Value = cnt;
             }
 
         }
