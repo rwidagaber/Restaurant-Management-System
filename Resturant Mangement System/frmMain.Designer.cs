@@ -73,7 +73,7 @@
             this.Reportsbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Reportsbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reportsbtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Reportsbtn.Image = global::Resturant_Mangement_System.Properties.Resources.reportLogoR;
+       //     this.Reportsbtn.Image = global::Resturant_Mangement_System.Properties.Resources.reportLogoR;
             this.Reportsbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Reportsbtn.Location = new System.Drawing.Point(75, 620);
             this.Reportsbtn.Name = "Reportsbtn";
@@ -89,7 +89,7 @@
             this.Settingbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Settingbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Settingbtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Settingbtn.Image = global::Resturant_Mangement_System.Properties.Resources.settingLogoR;
+//            this.Settingbtn.Image = global::Resturant_Mangement_System.Properties.Resources.settingLogoR;
             this.Settingbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Settingbtn.Location = new System.Drawing.Point(75, 680);
             this.Settingbtn.Name = "Settingbtn";
@@ -105,7 +105,7 @@
             this.Kitchenbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Kitchenbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Kitchenbtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Kitchenbtn.Image = global::Resturant_Mangement_System.Properties.Resources.KitchenLogo;
+        //    this.Kitchenbtn.Image = global::Resturant_Mangement_System.Properties.Resources.KitchenLogo;
             this.Kitchenbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Kitchenbtn.Location = new System.Drawing.Point(75, 560);
             this.Kitchenbtn.Name = "Kitchenbtn";
@@ -121,7 +121,7 @@
             this.POSbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.POSbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.POSbtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.POSbtn.Image = global::Resturant_Mangement_System.Properties.Resources.POSLogoR;
+          //  this.POSbtn.Image = global::Resturant_Mangement_System.Properties.Resources.POSLogoR;
             this.POSbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.POSbtn.Location = new System.Drawing.Point(75, 500);
             this.POSbtn.Name = "POSbtn";
@@ -137,7 +137,7 @@
             this.Staffbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Staffbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Staffbtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Staffbtn.Image = global::Resturant_Mangement_System.Properties.Resources.staffLogoR;
+        //    this.Staffbtn.Image = global::Resturant_Mangement_System.Properties.Resources.staffLogoR;
             this.Staffbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Staffbtn.Location = new System.Drawing.Point(75, 440);
             this.Staffbtn.Name = "Staffbtn";
@@ -153,7 +153,7 @@
             this.Tablesbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Tablesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tablesbtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Tablesbtn.Image = global::Resturant_Mangement_System.Properties.Resources.TableLogo;
+         //   this.Tablesbtn.Image = global::Resturant_Mangement_System.Properties.Resources.TableLogo;
             this.Tablesbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Tablesbtn.Location = new System.Drawing.Point(75, 380);
             this.Tablesbtn.Name = "Tablesbtn";
@@ -169,7 +169,7 @@
             this.Productsbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Productsbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Productsbtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Productsbtn.Image = global::Resturant_Mangement_System.Properties.Resources.ProductsLogoR;
+          //  this.Productsbtn.Image = global::Resturant_Mangement_System.Properties.Resources.ProductsLogoR;
             this.Productsbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Productsbtn.Location = new System.Drawing.Point(75, 320);
             this.Productsbtn.Name = "Productsbtn";
@@ -185,7 +185,7 @@
             this.Categoriesbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Categoriesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Categoriesbtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Categoriesbtn.Image = global::Resturant_Mangement_System.Properties.Resources.categoriesLogoR;
+          //  this.Categoriesbtn.Image = global::Resturant_Mangement_System.Properties.Resources.categoriesLogoR;
             this.Categoriesbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Categoriesbtn.Location = new System.Drawing.Point(75, 260);
             this.Categoriesbtn.Name = "Categoriesbtn";
@@ -202,7 +202,7 @@
             this.HomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.HomeBtn.Image = global::Resturant_Mangement_System.Properties.Resources.HomelogoR;
+        //    this.HomeBtn.Image = global::Resturant_Mangement_System.Properties.Resources.HomelogoR;
             this.HomeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HomeBtn.Location = new System.Drawing.Point(75, 200);
             this.HomeBtn.Name = "HomeBtn";
@@ -242,7 +242,7 @@
             // 
             this.Maxmizebtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Maxmizebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(64)))));
-            this.Maxmizebtn.BackgroundImage = global::Resturant_Mangement_System.Properties.Resources.maxLogo;
+//            this.Maxmizebtn.BackgroundImage = global::Resturant_Mangement_System.Properties.Resources.maxLogo;
             this.Maxmizebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Maxmizebtn.FlatAppearance.BorderSize = 0;
             this.Maxmizebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -257,7 +257,7 @@
             // 
             this.MinimizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MinimizeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(64)))));
-            this.MinimizeBtn.BackgroundImage = global::Resturant_Mangement_System.Properties.Resources.MimLogo;
+//            this.MinimizeBtn.BackgroundImage = global::Resturant_Mangement_System.Properties.Resources.MimLogo;
             this.MinimizeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.MinimizeBtn.FlatAppearance.BorderSize = 0;
             this.MinimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -271,7 +271,7 @@
             // 
             this.CloseBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CloseBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(64)))));
-            this.CloseBtn.BackgroundImage = global::Resturant_Mangement_System.Properties.Resources.exitLogo;
+//            this.CloseBtn.BackgroundImage = global::Resturant_Mangement_System.Properties.Resources.exitLogo;
             this.CloseBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.CloseBtn.FlatAppearance.BorderSize = 0;
             this.CloseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

@@ -80,12 +80,13 @@ namespace Resturant_Mangement_System
         private void Tablesbtn_Click(object sender, EventArgs e)
         {
             Btn_setting(sender, null);
-            AddControl(new View.frmTablesView());
+            AddControl(new View.frmTableView());
         }
 
         private void Staffbtn_Click(object sender, EventArgs e)
         {
             Btn_setting(sender, null);
+            AddControl(new View.frmStaffView());
         }
 
         private void POSbtn_Click(object sender, EventArgs e)
