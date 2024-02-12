@@ -1,0 +1,11 @@
+name: RMS
+run-name: Setting up the RMS Database
+on: [push]
+jobs: 
+    test-output: 
+        runs-on: unbuntu-latest
+        steps:
+        - name: Test Output
+          run: echo"Here  is a test"
+        
+
