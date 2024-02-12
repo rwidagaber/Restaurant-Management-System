@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using Resturant_Mangement_System.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -92,7 +93,8 @@ namespace Resturant_Mangement_System
 
         private void POSbtn_Click(object sender, EventArgs e)
         {
-            Btn_setting(sender, null);
+            frmPOS frm = new frmPOS();
+            frm.Show();
         }
 
         private void Kitchenbtn_Click(object sender, EventArgs e)
