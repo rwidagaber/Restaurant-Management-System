@@ -98,11 +98,14 @@ namespace Resturant_Mangement_System
         private void Kitchenbtn_Click(object sender, EventArgs e)
         {
             Btn_setting(sender, null);
+            AddControl(new View.frmKitchenView());
         }
 
         private void Reportsbtn_Click(object sender, EventArgs e)
         {
             Btn_setting(sender, null);
+            AddControl(new View.frmReportsView());
+
         }
 
         private void Settingbtn_Click(object sender, EventArgs e)

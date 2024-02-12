@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.staffView = new System.Windows.Forms.DataGridView();
             this.dgvSno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvid = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +39,11 @@
             this.dgvdel = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.staffView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.Size = new System.Drawing.Size(72, 29);
+            this.label2.Text = "Staff ";
             // 
             // btnAdd
             // 
@@ -73,8 +78,8 @@
             this.staffView.RowHeadersVisible = false;
             this.staffView.RowHeadersWidth = 10;
             this.staffView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
-            this.staffView.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            this.staffView.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.staffView.RowTemplate.Height = 24;
             this.staffView.Size = new System.Drawing.Size(776, 269);
             this.staffView.StandardTab = true;
