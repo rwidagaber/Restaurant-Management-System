@@ -282,6 +282,7 @@ namespace Resturant_Mangement_System.Model
             this.btnBill.TabIndex = 2;
             this.btnBill.Text = "Bill List";
             this.btnBill.UseVisualStyleBackColor = false;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
             // btnHold
             // 
@@ -295,6 +296,7 @@ namespace Resturant_Mangement_System.Model
             this.btnHold.TabIndex = 1;
             this.btnHold.Text = "Hold";
             this.btnHold.UseVisualStyleBackColor = false;
+            this.btnHold.Click += new System.EventHandler(this.btnHold_Click);
             // 
             // panel1
             // 
