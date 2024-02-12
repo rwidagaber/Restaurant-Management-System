@@ -30,16 +30,15 @@ namespace Resturant_Mangement_System.Model
             ProductPanel.Controls.Clear();
             LoadProducts();
         }
-
+         
 
         private void AddCategory()
         {
-            string qry = "Select * from Category";
+            string qry = "Select * from category";
             SqlCommand cmd = new SqlCommand(qry, MainClass.con);
-            SqlDataAdapter da = new SqlDataAdapter();
             DataTable dt = new DataTable();
-            da.Fill(dt);
-
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dt);
             CategoryPanel.Controls.Clear();
 
 
@@ -55,7 +54,6 @@ namespace Resturant_Mangement_System.Model
                     b.Text = row["CatNamw"].ToString();
 
                     //event for click
-
                     b.Click += new EventHandler(b_Click);
 
                     CategoryPanel.Controls.Add(b);
@@ -84,13 +82,12 @@ namespace Resturant_Mangement_System.Model
 
         private void AddItems(string id, string proID, string name, string cat, string price, Image pimage)
         {
-            var w = new UcProduct();
-            {
-                PName = name;
-                PPrice = price;
-                PCategory = cat;
-                PImage = pimage;
-                id = Convert.ToInt32(proID);
+            var w = new UcProduct {
+                PName = name,
+                PPrice = price,
+                PCategory = cat,
+                PImage = pimage,
+                id = Convert.ToInt32(proID)
             };
 
             ProductPanel.Controls.Add(w);
@@ -128,11 +125,11 @@ namespace Resturant_Mangement_System.Model
 
         private void LoadProducts()
         {
-            string qry = "select * from products inner join category on catID = categoryID";
+            string qry = "select * from product inner join category on catID = categoryID";
             SqlCommand cmd = new SqlCommand(qry, MainClass.con);
-            SqlDataAdapter da = new SqlDataAdapter();
             DataTable dt = new DataTable();
-            da.Fill(dt);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dt);
 
             foreach (DataRow item in dt.Rows)
             {
