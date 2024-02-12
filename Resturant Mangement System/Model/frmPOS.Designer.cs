@@ -203,7 +203,7 @@ namespace Resturant_Mangement_System.Model
             // 
             // btnDin
             // 
-            this.btnDin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(87)))), ((int)(((byte)(85)))));
+            this.btnDin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(0)))));
             this.btnDin.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDin.FlatAppearance.BorderSize = 0;
             this.btnDin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -214,6 +214,7 @@ namespace Resturant_Mangement_System.Model
             this.btnDin.TabIndex = 6;
             this.btnDin.Text = "Din In";
             this.btnDin.UseVisualStyleBackColor = false;
+            this.btnDin.Click += new System.EventHandler(this.btnDin_Click);
             // 
             // POS
             // 
@@ -228,7 +229,7 @@ namespace Resturant_Mangement_System.Model
             // 
             // btnTake
             // 
-            this.btnTake.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(87)))), ((int)(((byte)(85)))));
+            this.btnTake.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(0)))));
             this.btnTake.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnTake.FlatAppearance.BorderSize = 0;
             this.btnTake.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -239,10 +240,11 @@ namespace Resturant_Mangement_System.Model
             this.btnTake.TabIndex = 5;
             this.btnTake.Text = "Take Away";
             this.btnTake.UseVisualStyleBackColor = false;
+            this.btnTake.Click += new System.EventHandler(this.btnTake_Click);
             // 
             // btnDelievery
             // 
-            this.btnDelievery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(87)))), ((int)(((byte)(85)))));
+            this.btnDelievery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(0)))));
             this.btnDelievery.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDelievery.FlatAppearance.BorderSize = 0;
             this.btnDelievery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -252,10 +254,11 @@ namespace Resturant_Mangement_System.Model
             this.btnDelievery.TabIndex = 4;
             this.btnDelievery.Text = "Delievery";
             this.btnDelievery.UseVisualStyleBackColor = false;
+            this.btnDelievery.Click += new System.EventHandler(this.btnDelievery_Click);
             // 
             // btnKot
             // 
-            this.btnKot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(87)))), ((int)(((byte)(85)))));
+            this.btnKot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(0)))));
             this.btnKot.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnKot.FlatAppearance.BorderSize = 0;
             this.btnKot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -265,10 +268,11 @@ namespace Resturant_Mangement_System.Model
             this.btnKot.TabIndex = 3;
             this.btnKot.Text = "Kot";
             this.btnKot.UseVisualStyleBackColor = false;
+            this.btnKot.Click += new System.EventHandler(this.btnKot_Click);
             // 
             // btnBill
             // 
-            this.btnBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(87)))), ((int)(((byte)(85)))));
+            this.btnBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(0)))));
             this.btnBill.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnBill.FlatAppearance.BorderSize = 0;
             this.btnBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -281,7 +285,7 @@ namespace Resturant_Mangement_System.Model
             // 
             // btnHold
             // 
-            this.btnHold.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(87)))), ((int)(((byte)(85)))));
+            this.btnHold.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(0)))));
             this.btnHold.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnHold.FlatAppearance.BorderSize = 0;
             this.btnHold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -315,7 +319,7 @@ namespace Resturant_Mangement_System.Model
             // 
             // btnNew
             // 
-            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(87)))), ((int)(((byte)(85)))));
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(0)))));
             this.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnNew.FlatAppearance.BorderSize = 0;
             this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -325,6 +329,7 @@ namespace Resturant_Mangement_System.Model
             this.btnNew.TabIndex = 0;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // txtsearch
             // 
