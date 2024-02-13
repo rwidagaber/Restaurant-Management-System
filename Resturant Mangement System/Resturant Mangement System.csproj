@@ -70,12 +70,6 @@
     <Compile Include="Model\frmCategoryAdd.Designer.cs">
       <DependentUpon>frmCategoryAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\frmCheckout.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Model\frmCheckout.Designer.cs">
-      <DependentUpon>frmCheckout.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model\frmPOS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +87,18 @@
     </Compile>
     <Compile Include="Model\frmTableAdd.Designer.cs">
       <DependentUpon>frmTableAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\frmTableSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmTableSelect.Designer.cs">
+      <DependentUpon>frmTableSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\frmWaiterSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmWaiterSelect.Designer.cs">
+      <DependentUpon>frmWaiterSelect.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\UcProduct.cs">
       <SubType>UserControl</SubType>
@@ -186,6 +192,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmTableAdd.resx">
       <DependentUpon>frmTableAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmTableSelect.resx">
+      <DependentUpon>frmTableSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmWaiterSelect.resx">
+      <DependentUpon>frmWaiterSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\UcProduct.resx">
       <DependentUpon>UcProduct.cs</DependentUpon>
