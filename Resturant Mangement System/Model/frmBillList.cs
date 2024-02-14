@@ -64,7 +64,7 @@ namespace Resturant_Mangement_System.Model
         {
             if (dataGridView1.CurrentCell.OwningColumn.Name == "dgvedit")
             {
-                //this is change as we have to set from text prop before open
+                //this is change as we have to set from text propirtes before open
                 MainID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["dgvid"].Value);
                 this.Close();
             }

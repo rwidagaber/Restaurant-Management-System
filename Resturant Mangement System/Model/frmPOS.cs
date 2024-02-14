@@ -343,8 +343,8 @@ namespace Resturant_Mangement_System.Model
         private void btnBill_Click(object sender, EventArgs e)
         {
             frmBillList frm = new frmBillList();
-            //MainClass.BlurBackground(frm);
-            
+            frm.ShowDialog();
+
             if (frm.MainID > 0)
             {
                 id = frm.MainID;

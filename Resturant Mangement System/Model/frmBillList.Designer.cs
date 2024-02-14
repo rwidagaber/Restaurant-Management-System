@@ -29,7 +29,7 @@ namespace Resturant_Mangement_System.Model
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.categoryView = new System.Windows.Forms.DataGridView();
             this.dgvSno = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,9 +60,9 @@ namespace Resturant_Mangement_System.Model
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 290);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
@@ -91,15 +91,15 @@ namespace Resturant_Mangement_System.Model
             this.dgvdel});
             this.categoryView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.categoryView.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.categoryView.Location = new System.Drawing.Point(12, 104);
+            this.categoryView.Location = new System.Drawing.Point(12, 106);
             this.categoryView.Name = "categoryView";
             this.categoryView.ReadOnly = true;
             this.categoryView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.categoryView.RowHeadersVisible = false;
             this.categoryView.RowHeadersWidth = 10;
             this.categoryView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
-            this.categoryView.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            this.categoryView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.categoryView.RowTemplate.Height = 24;
             this.categoryView.Size = new System.Drawing.Size(776, 280);
             this.categoryView.StandardTab = true;
@@ -183,10 +183,10 @@ namespace Resturant_Mangement_System.Model
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmBillList";
             this.Text = "frmBillList";
-            this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.dataGridView1, 0);
             this.Controls.SetChildIndex(this.categoryView, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.panel2, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
