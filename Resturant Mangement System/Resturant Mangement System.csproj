@@ -77,12 +77,6 @@
     <Compile Include="Model\frmCategoryAdd.Designer.cs">
       <DependentUpon>frmCategoryAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\frmCheckout.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Model\frmCheckout.Designer.cs">
-      <DependentUpon>frmCheckout.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model\frmPOS.cs">
       <SubType>Form</SubType>
     </Compile>

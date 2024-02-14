@@ -33,7 +33,7 @@ namespace Resturant_Mangement_System.Model
             ProductPanel.Controls.Clear();
             LoadProducts();
         }
-
+         
 
         private void AddCategory()
         {
@@ -54,10 +54,9 @@ namespace Resturant_Mangement_System.Model
                     b.BackColor = Color.FromArgb(255, 223, 0);
                     b.Size = new Size(134, 45);
                     //b.ButtonMode = System.Windows.Forms.Enums.ButtonMode.RadioButton;
-                    b.Text = row["CatNamw"].ToString();
+                    b.Text = row["CatName"].ToString();
 
                     //event for click
-
                     b.Click += new EventHandler(b_Click);
 
                     CategoryPanel.Controls.Add(b);
@@ -86,8 +85,7 @@ namespace Resturant_Mangement_System.Model
 
         private void AddItems(string id, string proID, string name, string cat, string price, Image pimage)
         {
-            var w = new UcProduct
-            {
+            var w = new UcProduct {
                 PName = name,
                 PPrice = price,
                 PCategory = cat,
@@ -222,8 +220,8 @@ namespace Resturant_Mangement_System.Model
         {
             OrderType = "Din in";
             frmTableSelect tabfrm = new frmTableSelect();
-            //MainClass.BlurBackground(tabfrm);
 
+            tabfrm.ShowDialog();
             if (tabfrm.TableName != "")
             {
                 lblTable.Text = tabfrm.TableName;
@@ -240,7 +238,7 @@ namespace Resturant_Mangement_System.Model
             frmWaiterSelect frm2 =  new frmWaiterSelect();
 
            // MainClass.BlurBackground(frm2);
-
+           frm2.ShowDialog();
             if (frm2.WaiterName != "")
             {
                 lblWaiter.Text = frm2.WaiterName;
@@ -325,7 +323,7 @@ namespace Resturant_Mangement_System.Model
 
 
                 //msg--->saved successfully
-
+                MessageBox.Show("Saved Successfuly..");
                 MainID = 0;
                 detailID = 0;
                 dataGridView1.Rows.Clear();
