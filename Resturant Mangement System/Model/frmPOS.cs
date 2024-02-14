@@ -415,5 +415,22 @@ namespace Resturant_Mangement_System.Model
         {
 
         }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            frmCheckout frm = new frmCheckout();
+            frm.MainID = id;
+            frm.amt = Convert.ToDouble(lblTotal.Text);
+            frm.Show();
+            
+            //messagebox.show("Saved Successfully");
+            MainID = 0;
+            dataGridView1.Rows.Clear();
+            lblTable.Text = "";
+            lblWaiter.Text = "";
+            lblTable.Visible = false;
+            lblWaiter.Visible = false;
+            lblTotal.Text = "00";
+        }
     }
 }
