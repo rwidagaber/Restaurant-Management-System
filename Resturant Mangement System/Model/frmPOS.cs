@@ -21,6 +21,7 @@ namespace Resturant_Mangement_System.Model
         }
         public int MainID = 0;
         public string OrderType;
+        public int id = 0;
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -337,6 +338,97 @@ namespace Resturant_Mangement_System.Model
 
         }
 
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            frmBillList frm = new frmBillList();
+            frm.ShowDialog();
 
+            if (frm.MainID > 0)
+            {
+                id = frm.MainID;
+                LoadEntries();
+            }
+        }
+
+        private void LoadEntries()
+        {
+            string qry = @"Select * from tblMain m
+                                    inner join tblDetails d on m.MainID
+                                    inner join products p on p.pID = d.proID
+                                    where m.MainID = " + id + "";
+
+            SqlCommand cmd2 = new SqlCommand(qry, MainClass.con);
+            DataTable dt2 = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd2);
+            da.Fill(dt2);
+
+            if (dt2.Rows[0]["orderType"].ToString() == "Delivery")
+            {
+                btnDelievery.Checked = true;
+                lblWaiter.Visible = false;
+                lblTable.Visible = false;
+
+            }
+
+            else if (dt2.Rows[0]["orderType"].ToString() == "Take Away")
+            {
+                btnTake.Checked = true;
+                lblWaiter.Visible = false;
+                lblTable.Visible = false;
+
+            }
+
+            else
+            {
+                btnDin.Checked = true;
+                lblWaiter.Visible = true;
+                lblTable.Visible = true;
+
+            }
+
+            dataGridView1.Rows.Clear();
+
+            foreach (DataRow item in dt2.Rows)
+            {
+                lblTable.Text = item["TableName"].ToString();
+                lblWaiter.Text = item["WaiterName"].ToString();
+
+                string detailid = item["DetailID"].ToString();
+                string proName = item["proID"].ToString();
+                string proid = item["proID"].ToString();
+                string qty = item["qty"].ToString();
+                string price = item["price"].ToString();
+                string amount = item["amount"].ToString();
+
+
+                object[] obj = { 0, detailid, proid, proName, qty, price, amount };
+
+                dataGridView1.Rows.Add(obj);
+            }
+            GetTotal();
+
+        }
+
+        private void btnHold_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            frmCheckout frm = new frmCheckout();
+            frm.MainID = id;
+            frm.amt = Convert.ToDouble(lblTotal.Text);
+            frm.Show();
+            
+            //messagebox.show("Saved Successfully");
+            MainID = 0;
+            dataGridView1.Rows.Clear();
+            lblTable.Text = "";
+            lblWaiter.Text = "";
+            lblTable.Visible = false;
+            lblWaiter.Visible = false;
+            lblTotal.Text = "00";
+        }
     }
 }
