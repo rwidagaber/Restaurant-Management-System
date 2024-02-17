@@ -21,7 +21,7 @@ namespace Resturant_Mangement_System.Model
 
         private void frmWaiterSelect_Load(object sender, EventArgs e)
         {
-            string qry = "Select * from staff where sRole like 'waiter'";
+            string qry = "Select * from staff where sRole like 'Waiter'";
             SqlCommand cmd = new SqlCommand(qry, MainClass.con);
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
