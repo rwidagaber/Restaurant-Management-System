@@ -364,7 +364,7 @@ namespace Resturant_Mangement_System.Model
 
             if (dt2.Rows[0]["orderType"].ToString() == "Delivery")
             {
-                btnDelievery.Checked = true;
+                //btnDelievery. = true;
                 lblWaiter.Visible = false;
                 lblTable.Visible = false;
 
@@ -372,7 +372,7 @@ namespace Resturant_Mangement_System.Model
 
             else if (dt2.Rows[0]["orderType"].ToString() == "Take Away")
             {
-                btnTake.Checked = true;
+               // btnTake.Checked = true;
                 lblWaiter.Visible = false;
                 lblTable.Visible = false;
 
@@ -380,7 +380,7 @@ namespace Resturant_Mangement_System.Model
 
             else
             {
-                btnDin.Checked = true;
+                //btnDin.Checked = true;
                 lblWaiter.Visible = true;
                 lblTable.Visible = true;
 
@@ -419,7 +419,7 @@ namespace Resturant_Mangement_System.Model
             frmCheckout frm = new frmCheckout();
             frm.MainID = id;
             frm.amt = Convert.ToDouble(lblTotal.Text);
-            frm.Show();
+            frm.ShowDialog();
             
             //messagebox.show("Saved Successfully");
             MainID = 0;

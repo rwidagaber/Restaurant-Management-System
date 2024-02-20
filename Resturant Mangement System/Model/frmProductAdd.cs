@@ -25,8 +25,9 @@ namespace Resturant_Mangement_System.View
 
         private void frmProductAdd_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'rMDatabaseDataSet.category' table. You can move, or remove it, as needed.
-            this.categoryTableAdapter.Fill(this.rMDatabaseDataSet.category);
+            // TODO: This line of code loads data into the 'rMSDataSet1.category' table. You can move, or remove it, as needed.
+            this.categoryTableAdapter.Fill(this.rMSDataSet1.category);
+
             if (cID > 0)
             {
                 cbcat.SelectedValue=cID;

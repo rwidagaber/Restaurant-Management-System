@@ -106,7 +106,7 @@ namespace Resturant_Mangement_System
         private void Reportsbtn_Click(object sender, EventArgs e)
         {
             Btn_setting(sender, null);
-            AddControl(new View.frmReportsView());
+            AddControl(new View.frmReportView());
 
         }
 

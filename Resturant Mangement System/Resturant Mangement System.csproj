@@ -36,6 +36,18 @@
     <Reference Include="Guna.UI">
       <HintPath>..\..\..\..\APP SETUP\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WebForms.10.0.40219.1\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportViewer.WinForms.v12.12.0.0.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
@@ -44,6 +56,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
     <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -79,6 +92,12 @@
     </Compile>
     <Compile Include="Model\frmCategoryAdd.Designer.cs">
       <DependentUpon>frmCategoryAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\frmCheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmCheckout.Designer.cs">
+      <DependentUpon>frmCheckout.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\frmPOS.cs">
       <SubType>Form</SubType>
@@ -123,10 +142,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="RMDatabaseDataSet.Designer.cs">
+    <Compile Include="RMSDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RMDatabaseDataSet.xsd</DependentUpon>
+      <DependentUpon>RMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RMSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RMSDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="SampleView.cs">
       <SubType>Form</SubType>
@@ -164,11 +188,11 @@
     <Compile Include="View\frmProductView.Designer.cs">
       <DependentUpon>frmProductView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmReportsView.cs">
+    <Compile Include="View\frmReportView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmReportsView.Designer.cs">
-      <DependentUpon>frmReportsView.cs</DependentUpon>
+    <Compile Include="View\frmReportView.Designer.cs">
+      <DependentUpon>frmReportView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmStaffView.cs">
       <SubType>Form</SubType>
@@ -223,6 +247,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMenu.rdlc" />
     <EmbeddedResource Include="SampleView.resx">
       <DependentUpon>SampleView.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,8 +263,8 @@
     <EmbeddedResource Include="View\frmProductView.resx">
       <DependentUpon>frmProductView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmReportsView.resx">
-      <DependentUpon>frmReportsView.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmReportView.resx">
+      <DependentUpon>frmReportView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmStaffView.resx">
       <DependentUpon>frmStaffView.cs</DependentUpon>
@@ -257,16 +282,27 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="RMDatabaseDataSet.xsc">
-      <DependentUpon>RMDatabaseDataSet.xsd</DependentUpon>
+    <None Include="RMSDataSet.xsc">
+      <DependentUpon>RMSDataSet.xsd</DependentUpon>
     </None>
-    <None Include="RMDatabaseDataSet.xsd">
+    <None Include="RMSDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RMDatabaseDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>RMSDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="RMDatabaseDataSet.xss">
-      <DependentUpon>RMDatabaseDataSet.xsd</DependentUpon>
+    <None Include="RMSDataSet.xss">
+      <DependentUpon>RMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RMSDataSet1.xsc">
+      <DependentUpon>RMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="RMSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RMSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RMSDataSet1.xss">
+      <DependentUpon>RMSDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -274,7 +310,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\" />
-    <Folder Include="Reports\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

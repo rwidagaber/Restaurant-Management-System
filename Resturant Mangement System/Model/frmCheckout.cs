@@ -35,7 +35,7 @@ namespace Resturant_Mangement_System.Model
             txtChange.Text = change.ToString();
         }
 
-        public override void btnSave(object sender, EventArgs e)
+        public override void btnSave_Click(object sender, EventArgs e)
         {
             string qry = @"Update tbMain set total = @total ,recived = @rec , change = @change
                                       status = 'Paid'     where MainID = @id";
