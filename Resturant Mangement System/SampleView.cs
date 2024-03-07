@@ -29,10 +29,7 @@ namespace Resturant_Mangement_System
 
         
 
-        private void SampleView_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         
 

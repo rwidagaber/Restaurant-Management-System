@@ -19,7 +19,7 @@ namespace Resturant_Mangement_System.Model
         {
             InitializeComponent();
         }
-        public int MainID = 0;
+        public static int MainID = 0;
         public string OrderType="";
         public int id = 0;
         public int driverID = 0;
@@ -87,7 +87,7 @@ namespace Resturant_Mangement_System.Model
                 pro.Visible = pro.PCategory.ToLower().Contains(b.Text.Trim().ToLower());
             };
         }
-
+        // view Prudcut cards
         private void AddItems(string id, string proID, string name, string cat, string price, Image pimage)
         {
             var w = new UcProduct {
@@ -112,7 +112,7 @@ namespace Resturant_Mangement_System.Model
                         item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) *
                             double.Parse(item.Cells["dgvPricec"].Value.ToString());
 
-                        return;
+                        
 
                     }
 
@@ -237,12 +237,12 @@ namespace Resturant_Mangement_System.Model
             frmAddCustomer frm = new frmAddCustomer();
             frm.mainID = MainID;
             frm.orderType = OrderType;
-            frm.ShowDialog();
+           // frm.ShowDialog();
 
-            if(frm.txtName.Text!="") //as take away didn't have driver info
+            if (frm.txtName.Text != "") //as take away didn't have driver info
             {
                 driverID = frm.driverID;
-                lblDriverName.Text = "Customer Name: "+ frm.txtName.Text + "Phone: "+ frm.txtPhone.Text;
+                lblDriverName.Text = "Customer Name: " + frm.txtName.Text + "Phone: " + frm.txtPhone.Text;
                 lblDriverName.Visible = true;
                 customerName = frm.txtName.Text;
                 customerPhone = frm.txtPhone.Text;
@@ -412,7 +412,8 @@ namespace Resturant_Mangement_System.Model
 
             else if (dt2.Rows[0]["orderType"].ToString() == "Take Away")
             {
-               // btnTake.Checked = true;
+               // btnTake.Select() = true;
+                btnTake.BackColor=Color.White;
                 lblWaiter.Visible = false;
                 lblTable.Visible = false;
 
@@ -420,7 +421,7 @@ namespace Resturant_Mangement_System.Model
 
             else
             {
-                //btnDin.Checked = true;
+                //btnDin.check = true;
                 lblWaiter.Visible = true;
                 lblTable.Visible = true;
 
@@ -561,24 +562,6 @@ namespace Resturant_Mangement_System.Model
             }
         }
 
-        private void lblWaiter_Click(object sender, EventArgs e)
-        {
-
-        private void btnCheckout_Click(object sender, EventArgs e)
-        {
-            frmCheckout frm = new frmCheckout();
-            frm.MainID = id;
-            frm.amt = Convert.ToDouble(lblTotal.Text);
-            frm.ShowDialog();
-            
-            //messagebox.show("Saved Successfully");
-            MainID = 0;
-            dataGridView1.Rows.Clear();
-            lblTable.Text = "";
-            lblWaiter.Text = "";
-            lblTable.Visible = false;
-            lblWaiter.Visible = false;
-            lblTotal.Text = "00";
-        }
+       
     }
 }

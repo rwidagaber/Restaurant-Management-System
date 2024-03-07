@@ -42,6 +42,7 @@ namespace Resturant_Mangement_System.Model
             this.dgvedit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvdel = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryView)).BeginInit();
@@ -56,12 +57,22 @@ namespace Resturant_Mangement_System.Model
             this.panel2.Location = new System.Drawing.Point(0, 390);
             this.panel2.Size = new System.Drawing.Size(800, 60);
             // 
+            // btnSave
+            // 
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            // 
+            // btnClose
+            // 
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(0)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -104,6 +115,7 @@ namespace Resturant_Mangement_System.Model
             this.categoryView.Size = new System.Drawing.Size(776, 280);
             this.categoryView.StandardTab = true;
             this.categoryView.TabIndex = 3;
+            this.categoryView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.categoryView_CellContentClick);
             // 
             // dgvSno
             // 
@@ -118,6 +130,7 @@ namespace Resturant_Mangement_System.Model
             // dgvid
             // 
             this.dgvid.HeaderText = "ID";
+            this.dgvid.MinimumWidth = 6;
             this.dgvid.Name = "dgvid";
             this.dgvid.ReadOnly = true;
             this.dgvid.Visible = false;
@@ -125,30 +138,35 @@ namespace Resturant_Mangement_System.Model
             // dgvtable
             // 
             this.dgvtable.HeaderText = "Table";
+            this.dgvtable.MinimumWidth = 6;
             this.dgvtable.Name = "dgvtable";
             this.dgvtable.ReadOnly = true;
             // 
             // dgvWaiter
             // 
             this.dgvWaiter.HeaderText = "Waiter";
+            this.dgvWaiter.MinimumWidth = 6;
             this.dgvWaiter.Name = "dgvWaiter";
             this.dgvWaiter.ReadOnly = true;
             // 
             // dgvType
             // 
             this.dgvType.HeaderText = "Order Type";
+            this.dgvType.MinimumWidth = 6;
             this.dgvType.Name = "dgvType";
             this.dgvType.ReadOnly = true;
             // 
             // dgvStatus
             // 
             this.dgvStatus.HeaderText = "Status";
+            this.dgvStatus.MinimumWidth = 6;
             this.dgvStatus.Name = "dgvStatus";
             this.dgvStatus.ReadOnly = true;
             // 
             // dgvTotal
             // 
             this.dgvTotal.HeaderText = "total";
+            this.dgvTotal.MinimumWidth = 6;
             this.dgvTotal.Name = "dgvTotal";
             this.dgvTotal.ReadOnly = true;
             // 
@@ -171,12 +189,11 @@ namespace Resturant_Mangement_System.Model
             this.dgvdel.MinimumWidth = 50;
             this.dgvdel.Name = "dgvdel";
             this.dgvdel.ReadOnly = true;
-            this.dgvdel.Visible = false;
             this.dgvdel.Width = 50;
             // 
             // frmBillList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.categoryView);
@@ -189,6 +206,7 @@ namespace Resturant_Mangement_System.Model
             this.Controls.SetChildIndex(this.panel2, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryView)).EndInit();

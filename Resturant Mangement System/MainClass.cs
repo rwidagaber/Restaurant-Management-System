@@ -120,7 +120,7 @@ namespace Resturant_Mangement_System
 
         }
         // for category comboBox
-        /*public static void CBFill(String qry,ComboBox cb)
+        public static void CBFill(String qry, ComboBox cb)
         {
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.CommandType = CommandType.Text;
@@ -132,7 +132,7 @@ namespace Resturant_Mangement_System
             cb.DataSource = dataTable;
             cb.SelectedIndex = -1;
 
-        }*/
-        
+        }
+
     }
 }

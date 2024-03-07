@@ -27,6 +27,8 @@ namespace Resturant_Mangement_System.View
         {
             // TODO: This line of code loads data into the 'rMSDataSet1.category' table. You can move, or remove it, as needed.
             this.categoryTableAdapter.Fill(this.rMSDataSet1.category);
+            // TODO: This line of code loads data into the 'rMSDataSet1.category' table. You can move, or remove it, as needed.
+            this.categoryTableAdapter.Fill(this.rMSDataSet1.category);
 
             if (cID > 0)
             {

@@ -41,7 +41,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtImage = new System.Windows.Forms.PictureBox();
             this.btnBrowse = new System.Windows.Forms.Button();
-            this.categoryTableAdapter2 = new Resturant_Mangement_System.RMSDataSetTableAdapters.categoryTableAdapter();
             this.rMSDataSet1 = new Resturant_Mangement_System.RMSDataSet1();
             this.categoryBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.categoryTableAdapter = new Resturant_Mangement_System.RMSDataSet1TableAdapters.categoryTableAdapter();
@@ -180,10 +179,6 @@
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
-            // categoryTableAdapter2
-            // 
-            this.categoryTableAdapter2.ClearBeforeFill = true;
-            // 
             // rMSDataSet1
             // 
             this.rMSDataSet1.DataSetName = "RMSDataSet1";
@@ -254,7 +249,6 @@
         private System.Windows.Forms.BindingSource categoryBindingSource1;
         private RMSDataSet rMSDataSet;
         private System.Windows.Forms.BindingSource categoryBindingSource2;
-        private RMSDataSetTableAdapters.categoryTableAdapter categoryTableAdapter2;
         private RMSDataSet1 rMSDataSet1;
         private System.Windows.Forms.BindingSource categoryBindingSource3;
         private RMSDataSet1TableAdapters.categoryTableAdapter categoryTableAdapter;

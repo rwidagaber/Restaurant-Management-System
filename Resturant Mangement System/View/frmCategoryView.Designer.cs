@@ -43,6 +43,14 @@
             this.label2.Size = new System.Drawing.Size(166, 29);
             this.label2.Text = "Category List";
             // 
+            // txtSearch
+            // 
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged_1);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            // 
             // categoryView
             // 
             this.categoryView.AllowUserToAddRows = false;
@@ -51,7 +59,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.categoryView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.categoryView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.categoryView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(0)))));
             this.categoryView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.categoryView.ColumnHeadersHeight = 50;
             this.categoryView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
@@ -126,7 +134,7 @@
             // frmCategoryView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.categoryView);
             this.Name = "frmCategoryView";

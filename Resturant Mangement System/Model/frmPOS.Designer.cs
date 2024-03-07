@@ -126,6 +126,7 @@ namespace Resturant_Mangement_System.Model
             this.dgvAmount});
             this.dataGridView1.Location = new System.Drawing.Point(639, 133);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(333, 407);
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
@@ -134,11 +135,13 @@ namespace Resturant_Mangement_System.Model
             // 
             this.dgvSno.FillWeight = 28.03069F;
             this.dgvSno.HeaderText = "Sr#";
+            this.dgvSno.MinimumWidth = 6;
             this.dgvSno.Name = "dgvSno";
             // 
             // dgvid
             // 
             this.dgvid.HeaderText = "id";
+            this.dgvid.MinimumWidth = 6;
             this.dgvid.Name = "dgvid";
             this.dgvid.Visible = false;
             // 
@@ -197,9 +200,9 @@ namespace Resturant_Mangement_System.Model
             this.btnCheckout.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnCheckout.FlatAppearance.BorderSize = 0;
             this.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckout.Location = new System.Drawing.Point(516, 550);
+            this.btnCheckout.Location = new System.Drawing.Point(506, 550);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(68, 23);
+            this.btnCheckout.Size = new System.Drawing.Size(78, 26);
             this.btnCheckout.TabIndex = 1;
             this.btnCheckout.Text = "Check Out";
             this.btnCheckout.UseVisualStyleBackColor = false;
@@ -236,7 +239,6 @@ namespace Resturant_Mangement_System.Model
             this.lblWaiter.Text = "Waiter";
             this.lblWaiter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblWaiter.Visible = false;
-            this.lblWaiter.Click += new System.EventHandler(this.lblWaiter_Click);
             // 
             // lblTable
             // 
@@ -272,7 +274,7 @@ namespace Resturant_Mangement_System.Model
             this.POS.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.POS.Location = new System.Drawing.Point(120, 9);
             this.POS.Name = "POS";
-            this.POS.Size = new System.Drawing.Size(40, 18);
+            this.POS.Size = new System.Drawing.Size(49, 24);
             this.POS.TabIndex = 5;
             this.POS.Text = "POS";
             // 
@@ -410,7 +412,7 @@ namespace Resturant_Mangement_System.Model
             this.lblDriverName.Name = "lblDriverName";
             this.lblDriverName.Size = new System.Drawing.Size(81, 29);
             this.lblDriverName.TabIndex = 24;
-            this.lblDriverName.Text = "Table";
+            this.lblDriverName.Text = "Driver";
             this.lblDriverName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblDriverName.Visible = false;
             // 
@@ -430,6 +432,7 @@ namespace Resturant_Mangement_System.Model
             this.Controls.Add(this.txtsearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPOS";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPOS";
             this.Load += new System.EventHandler(this.frmPOS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

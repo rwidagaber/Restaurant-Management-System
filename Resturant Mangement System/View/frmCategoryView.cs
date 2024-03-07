@@ -68,5 +68,10 @@ namespace Resturant_Mangement_System.View
                 }
             }
         }
+
+        private void txtSearch_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

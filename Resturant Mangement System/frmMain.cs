@@ -52,13 +52,13 @@ namespace Resturant_Mangement_System
         {
             foreach (Control c in BtnPanel.Controls)
             {
-                c.BackColor = Color.FromArgb(38, 38, 64);
+                c.BackColor = Color.FromArgb(25,25,25);
                 c.ForeColor = Color.White;
             }
             // click setting
             Control click=(Control)sender;
             click.BackColor = Color.FromArgb(255, 223, 0);
-            click.ForeColor=Color.White;
+            click.ForeColor=Color.Black;
         }
 
         private void HomeBtn_Click(object sender, EventArgs e)
@@ -94,7 +94,9 @@ namespace Resturant_Mangement_System
         private void POSbtn_Click(object sender, EventArgs e)
         {
             frmPOS frm = new frmPOS();
-            frm.Show();
+            frm.ShowDialog();
+            this.Hide();
+            
         }
 
         private void Kitchenbtn_Click(object sender, EventArgs e)
