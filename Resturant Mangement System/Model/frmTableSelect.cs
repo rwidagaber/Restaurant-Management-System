@@ -22,7 +22,7 @@ namespace Resturant_Mangement_System.Model
 
         private void frmTableSelect_Load(object sender, EventArgs e)
         {
-            string qry = "Select * from table";
+            string qry = "Select * from tables";
             SqlCommand cmd = new SqlCommand(qry, MainClass.con);
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);

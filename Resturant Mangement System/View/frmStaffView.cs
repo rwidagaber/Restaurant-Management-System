@@ -26,6 +26,8 @@ namespace Resturant_Mangement_System.View
             listBox.Items.Add(dgvName);
             listBox.Items.Add(dgvPhone);
             listBox.Items.Add(dgvRole);
+            listBox.Items.Add(dgvusername);
+            listBox.Items.Add(dgvPassword);
 
 
             MainClass.LoadData(qry, staffView, listBox);
@@ -55,6 +57,8 @@ namespace Resturant_Mangement_System.View
                 frm.id = Convert.ToInt32(staffView.CurrentRow.Cells["dgvid"].Value);
                 frm.txtstaffName.Text = Convert.ToString(staffView.CurrentRow.Cells["dgvName"].Value);
                 frm.txtPhone.Text = Convert.ToString(staffView.CurrentRow.Cells["dgvPhone"].Value);
+                frm.txtPhone.Text = Convert.ToString(staffView.CurrentRow.Cells["dgvusername"].Value);
+                frm.txtPhone.Text = Convert.ToString(staffView.CurrentRow.Cells["dgvPassword"].Value);
                 frm.cbRole.Text = Convert.ToString(staffView.CurrentRow.Cells["dgvRole"].Value);
                 frm.ShowDialog();
                 GetData();

@@ -9,8 +9,7 @@ create table users(
 	username varChar(50),
 	upass varchar(10) not null,
 	uname varchar(50) not null,
-	uphone varchar(20) ,
-	category varchar(50)
+	uphone varchar(20),
 )
 
 create table tables(
@@ -29,7 +28,8 @@ status varchar(15),
 orderType varchar(15),
 total float,
 recevied float,
-change float
+change float,
+
 )
 
 create table tblDetails
@@ -47,6 +47,8 @@ create table staff(
 	sName varchar(50),
 	sPhone varchar(15),
 	sRole varchar(50),
+	username varChar(50),
+	upass varchar(10) not null,
 )
 
 create table product(

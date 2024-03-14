@@ -25,12 +25,12 @@ namespace Resturant_Mangement_System.Model
             //insert category
             if (id == 0)
             {
-                qry = "Insert into staff Values(@Name,@Phone,@Role)";
+                qry = "Insert into staff Values(@Name,@Phone,@Role,@Username,@Password)";
             }
             //Update category
             else
             {
-                qry = "Update staff Set sName = @Name,sPhone = @Phone, sRole=@Role  where staffID= @id";
+                qry = "Update staff Set sName = @Name,sPhone = @Phone, sRole=@Role,username=@Username,userPass=@Password where staffID= @id";
 
             }
             Hashtable hashtable = new Hashtable();
@@ -38,7 +38,8 @@ namespace Resturant_Mangement_System.Model
             hashtable.Add("@Name", txtstaffName.Text);
             hashtable.Add("@Phone", txtPhone.Text);
             hashtable.Add("@Role", cbRole.Text);
-
+            hashtable.Add("@Username", txtUsername.Text);
+            hashtable.Add("@Password",txtPass.Text);
 
             if (MainClass.SQl(qry, hashtable) > 0)
             {
@@ -46,12 +47,14 @@ namespace Resturant_Mangement_System.Model
                 id = 0;
                 txtstaffName.Text = "";
                 txtstaffName.Focus();
-                txtPhone.Text = "";
-                txtPhone.Focus();
+                txtUsername.Text = "";
+                txtUsername.Focus();
                 cbRole.SelectedIndex = -1;
                 cbRole.Focus();
             }
         }
+
+       
     }
    
 }

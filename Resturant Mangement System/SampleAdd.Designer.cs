@@ -57,14 +57,13 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(94, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 29);
+            this.label1.Size = new System.Drawing.Size(79, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Header";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox1
             // 
-   //         this.pictureBox1.Image = global::Resturant_Mangement_System.Properties.Resources.categoriesLogo;
             this.pictureBox1.Location = new System.Drawing.Point(12, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(76, 55);
@@ -137,11 +136,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnClose;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Button btnSave;
+        public System.Windows.Forms.Button btnClose;
     }
 }

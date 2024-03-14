@@ -29,12 +29,17 @@ namespace Resturant_Mangement_System.Model
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPOS));
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.ProductPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvSno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCheckout = new System.Windows.Forms.Button();
             this.CategoryPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -49,19 +54,11 @@ namespace Resturant_Mangement_System.Model
             this.btnBill = new System.Windows.Forms.Button();
             this.btnHold = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.PictureBox();
             this.btnNew = new System.Windows.Forms.Button();
             this.txtsearch = new System.Windows.Forms.TextBox();
-            this.dgvSno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExit = new System.Windows.Forms.PictureBox();
-            this.ucProduct1 = new Resturant_Mangement_System.Model.UcProduct();
-            this.ProductPanel.SuspendLayout();
+            this.lblDriverName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.CategoryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -79,25 +76,27 @@ namespace Resturant_Mangement_System.Model
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(669, 544);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(701, 550);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 33);
+            this.label1.Size = new System.Drawing.Size(55, 26);
             this.label1.TabIndex = 21;
             this.label1.Text = "Total";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTotal
             // 
-            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTotal.Location = new System.Drawing.Point(775, 551);
+            this.lblTotal.ForeColor = System.Drawing.Color.Black;
+            this.lblTotal.Location = new System.Drawing.Point(749, 553);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(40, 18);
+            this.lblTotal.Size = new System.Drawing.Size(44, 23);
             this.lblTotal.TabIndex = 22;
             this.lblTotal.Text = "0.00";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -106,7 +105,6 @@ namespace Resturant_Mangement_System.Model
             // 
             this.ProductPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ProductPanel.AutoScroll = true;
-            this.ProductPanel.Controls.Add(this.ucProduct1);
             this.ProductPanel.Location = new System.Drawing.Point(123, 133);
             this.ProductPanel.Name = "ProductPanel";
             this.ProductPanel.Size = new System.Drawing.Size(510, 410);
@@ -128,34 +126,87 @@ namespace Resturant_Mangement_System.Model
             this.dgvAmount});
             this.dataGridView1.Location = new System.Drawing.Point(639, 133);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(333, 407);
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
+            // dgvSno
+            // 
+            this.dgvSno.FillWeight = 28.03069F;
+            this.dgvSno.HeaderText = "Sr#";
+            this.dgvSno.MinimumWidth = 6;
+            this.dgvSno.Name = "dgvSno";
+            // 
+            // dgvid
+            // 
+            this.dgvid.HeaderText = "id";
+            this.dgvid.MinimumWidth = 6;
+            this.dgvid.Name = "dgvid";
+            this.dgvid.Visible = false;
+            // 
+            // dgvName
+            // 
+            this.dgvName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvName.FillWeight = 82.44316F;
+            this.dgvName.HeaderText = "Name";
+            this.dgvName.MinimumWidth = 50;
+            this.dgvName.Name = "dgvName";
+            // 
+            // dgvQty
+            // 
+            this.dgvQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvQty.FillWeight = 30F;
+            this.dgvQty.HeaderText = "Qty";
+            this.dgvQty.MinimumWidth = 30;
+            this.dgvQty.Name = "dgvQty";
+            this.dgvQty.Width = 30;
+            // 
+            // dgvPrice
+            // 
+            this.dgvPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvPrice.FillWeight = 50F;
+            this.dgvPrice.HeaderText = "Price";
+            this.dgvPrice.MinimumWidth = 50;
+            this.dgvPrice.Name = "dgvPrice";
+            this.dgvPrice.Width = 50;
+            // 
+            // dgvAmount
+            // 
+            this.dgvAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvAmount.FillWeight = 50F;
+            this.dgvAmount.HeaderText = "Amount";
+            this.dgvAmount.MinimumWidth = 50;
+            this.dgvAmount.Name = "dgvAmount";
+            this.dgvAmount.Width = 50;
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(64)))));
-            this.flowLayoutPanel1.Controls.Add(this.btnCheckout);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 588);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 579);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(650, 0, 0, 0);
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1058, 44);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1058, 53);
             this.flowLayoutPanel1.TabIndex = 17;
             // 
             // btnCheckout
             // 
-            this.btnCheckout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(87)))), ((int)(((byte)(85)))));
+            this.btnCheckout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCheckout.AutoSize = true;
+            this.btnCheckout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(0)))));
             this.btnCheckout.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnCheckout.FlatAppearance.BorderSize = 0;
             this.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckout.Location = new System.Drawing.Point(653, 3);
+            this.btnCheckout.Location = new System.Drawing.Point(506, 550);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(68, 38);
+            this.btnCheckout.Size = new System.Drawing.Size(78, 26);
             this.btnCheckout.TabIndex = 1;
             this.btnCheckout.Text = "Check Out";
             this.btnCheckout.UseVisualStyleBackColor = false;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
             // CategoryPanel
             // 
@@ -181,9 +232,9 @@ namespace Resturant_Mangement_System.Model
             // 
             this.lblWaiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWaiter.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblWaiter.Location = new System.Drawing.Point(849, 41);
+            this.lblWaiter.Location = new System.Drawing.Point(836, 41);
             this.lblWaiter.Name = "lblWaiter";
-            this.lblWaiter.Size = new System.Drawing.Size(68, 29);
+            this.lblWaiter.Size = new System.Drawing.Size(81, 29);
             this.lblWaiter.TabIndex = 8;
             this.lblWaiter.Text = "Waiter";
             this.lblWaiter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -193,9 +244,9 @@ namespace Resturant_Mangement_System.Model
             // 
             this.lblTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTable.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTable.Location = new System.Drawing.Point(849, 12);
+            this.lblTable.Location = new System.Drawing.Point(836, 12);
             this.lblTable.Name = "lblTable";
-            this.lblTable.Size = new System.Drawing.Size(68, 29);
+            this.lblTable.Size = new System.Drawing.Size(81, 29);
             this.lblTable.TabIndex = 7;
             this.lblTable.Text = "Table";
             this.lblTable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -223,7 +274,7 @@ namespace Resturant_Mangement_System.Model
             this.POS.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.POS.Location = new System.Drawing.Point(120, 9);
             this.POS.Name = "POS";
-            this.POS.Size = new System.Drawing.Size(40, 18);
+            this.POS.Size = new System.Drawing.Size(49, 24);
             this.POS.TabIndex = 5;
             this.POS.Text = "POS";
             // 
@@ -282,6 +333,7 @@ namespace Resturant_Mangement_System.Model
             this.btnBill.TabIndex = 2;
             this.btnBill.Text = "Bill List";
             this.btnBill.UseVisualStyleBackColor = false;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
             // btnHold
             // 
@@ -295,6 +347,7 @@ namespace Resturant_Mangement_System.Model
             this.btnHold.TabIndex = 1;
             this.btnHold.Text = "Hold";
             this.btnHold.UseVisualStyleBackColor = false;
+            this.btnHold.Click += new System.EventHandler(this.btnHold_Click);
             // 
             // panel1
             // 
@@ -316,6 +369,17 @@ namespace Resturant_Mangement_System.Model
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1058, 74);
             this.panel1.TabIndex = 16;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(0)))));
+            this.btnExit.Location = new System.Drawing.Point(923, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(100, 50);
+            this.btnExit.TabIndex = 24;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnNew
             // 
@@ -340,83 +404,27 @@ namespace Resturant_Mangement_System.Model
             this.txtsearch.TabIndex = 19;
             this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
             // 
-            // dgvSno
+            // lblDriverName
             // 
-            this.dgvSno.FillWeight = 28.03069F;
-            this.dgvSno.HeaderText = "Sr#";
-            this.dgvSno.Name = "dgvSno";
-            // 
-            // dgvid
-            // 
-            this.dgvid.HeaderText = "id";
-            this.dgvid.Name = "dgvid";
-            this.dgvid.Visible = false;
-            // 
-            // dgvName
-            // 
-            this.dgvName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvName.FillWeight = 82.44316F;
-            this.dgvName.HeaderText = "Name";
-            this.dgvName.MinimumWidth = 50;
-            this.dgvName.Name = "dgvName";
-            // 
-            // dgvQty
-            // 
-            this.dgvQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvQty.FillWeight = 30F;
-            this.dgvQty.HeaderText = "Qty";
-            this.dgvQty.MinimumWidth = 30;
-            this.dgvQty.Name = "dgvQty";
-            this.dgvQty.Width = 30;
-            // 
-            // dgvPrice
-            // 
-            this.dgvPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvPrice.FillWeight = 50F;
-            this.dgvPrice.HeaderText = "Price";
-            this.dgvPrice.MinimumWidth = 50;
-            this.dgvPrice.Name = "dgvPrice";
-            this.dgvPrice.Width = 50;
-            // 
-            // dgvAmount
-            // 
-            this.dgvAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvAmount.FillWeight = 50F;
-            this.dgvAmount.HeaderText = "Amount";
-            this.dgvAmount.MinimumWidth = 50;
-            this.dgvAmount.Name = "dgvAmount";
-            this.dgvAmount.Width = 50;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(0)))));
-            this.btnExit.Location = new System.Drawing.Point(923, 12);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(100, 50);
-            this.btnExit.TabIndex = 24;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // ucProduct1
-            // 
-            this.ucProduct1.id = 0;
-            this.ucProduct1.Location = new System.Drawing.Point(3, 3);
-            this.ucProduct1.Name = "ucProduct1";
-            this.ucProduct1.PCategory = null;
-            this.ucProduct1.PImage = ((System.Drawing.Image)(resources.GetObject("ucProduct1.PImage")));
-            this.ucProduct1.PName = "label1";
-            this.ucProduct1.PPrice = null;
-            this.ucProduct1.Size = new System.Drawing.Size(166, 153);
-            this.ucProduct1.TabIndex = 0;
+            this.lblDriverName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDriverName.ForeColor = System.Drawing.Color.Black;
+            this.lblDriverName.Location = new System.Drawing.Point(392, 99);
+            this.lblDriverName.Name = "lblDriverName";
+            this.lblDriverName.Size = new System.Drawing.Size(81, 29);
+            this.lblDriverName.TabIndex = 24;
+            this.lblDriverName.Text = "Driver";
+            this.lblDriverName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDriverName.Visible = false;
             // 
             // frmPOS
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1058, 632);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.lblDriverName);
+            this.Controls.Add(this.btnCheckout);
             this.Controls.Add(this.ProductPanel);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.CategoryPanel);
@@ -424,11 +432,10 @@ namespace Resturant_Mangement_System.Model
             this.Controls.Add(this.txtsearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPOS";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPOS";
             this.Load += new System.EventHandler(this.frmPOS_Load);
-            this.ProductPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.CategoryPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -470,5 +477,6 @@ namespace Resturant_Mangement_System.Model
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvAmount;
         private System.Windows.Forms.PictureBox btnExit;
         private UcProduct ucProduct1;
+        private System.Windows.Forms.Label lblDriverName;
     }
 }

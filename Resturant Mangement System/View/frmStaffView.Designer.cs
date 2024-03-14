@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.staffView = new System.Windows.Forms.DataGridView();
             this.dgvSno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvusername = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvedit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvdel = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.staffView)).BeginInit();
@@ -67,6 +69,8 @@
             this.dgvName,
             this.dgvPhone,
             this.dgvRole,
+            this.dgvusername,
+            this.dgvPassword,
             this.dgvedit,
             this.dgvdel});
             this.staffView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
@@ -78,8 +82,8 @@
             this.staffView.RowHeadersVisible = false;
             this.staffView.RowHeadersWidth = 10;
             this.staffView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
-            this.staffView.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            this.staffView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.staffView.RowTemplate.Height = 24;
             this.staffView.Size = new System.Drawing.Size(776, 269);
             this.staffView.StandardTab = true;
@@ -125,6 +129,21 @@
             this.dgvRole.Name = "dgvRole";
             this.dgvRole.ReadOnly = true;
             // 
+            // dgvusername
+            // 
+            this.dgvusername.HeaderText = "Username";
+            this.dgvusername.MinimumWidth = 6;
+            this.dgvusername.Name = "dgvusername";
+            this.dgvusername.ReadOnly = true;
+            // 
+            // dgvPassword
+            // 
+            this.dgvPassword.HeaderText = "Password";
+            this.dgvPassword.MinimumWidth = 6;
+            this.dgvPassword.Name = "dgvPassword";
+            this.dgvPassword.ReadOnly = true;
+            this.dgvPassword.Visible = false;
+            // 
             // dgvedit
             // 
             this.dgvedit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -137,13 +156,10 @@
             // 
             // dgvdel
             // 
-            this.dgvdel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvdel.FillWeight = 50F;
             this.dgvdel.HeaderText = "";
-            this.dgvdel.MinimumWidth = 50;
+            this.dgvdel.MinimumWidth = 6;
             this.dgvdel.Name = "dgvdel";
             this.dgvdel.ReadOnly = true;
-            this.dgvdel.Width = 50;
             // 
             // frmStaffView
             // 
@@ -172,6 +188,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvRole;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvusername;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvPassword;
         private System.Windows.Forms.DataGridViewImageColumn dgvedit;
         private System.Windows.Forms.DataGridViewImageColumn dgvdel;
     }

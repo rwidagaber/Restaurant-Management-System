@@ -82,6 +82,7 @@
             // SampleView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtSearch);
@@ -90,7 +91,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SampleView";
             this.Text = "SampleView";
-            this.Load += new System.EventHandler(this.SampleView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

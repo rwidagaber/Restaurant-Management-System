@@ -17,7 +17,7 @@ namespace Resturant_Mangement_System
     {
         //connect to database
 
-        public static readonly string con_string = "Data Source=DESKTOP-0DHJI6P;Initial Catalog=RMS;Integrated Security=True ;TrustServerCertificate=True";
+        public static readonly string con_string = "Data Source=CAMELLIA;Initial Catalog=RMS;Integrated Security=True;TrustServerCertificate=True";
         public static SqlConnection con=new SqlConnection(con_string);
 
         //Methode to check user validation
@@ -34,7 +34,7 @@ namespace Resturant_Mangement_System
 
             if (dt.Rows.Count > 0)
             {
-                isValid = true;
+                isValid = true;                                          
                 USER = dt.Rows[0]["uname"].ToString();
             }
             return isValid;
@@ -108,7 +108,7 @@ namespace Resturant_Mangement_System
             }
 
         }
-        //For scr 
+        //For scr  
         private static void gv_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             System.Windows.Forms.DataGridView gv = (System.Windows.Forms.DataGridView)sender;
@@ -120,7 +120,7 @@ namespace Resturant_Mangement_System
 
         }
         // for category comboBox
-        /*public static void CBFill(String qry,ComboBox cb)
+        public static void CBFill(String qry, ComboBox cb)
         {
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.CommandType = CommandType.Text;
@@ -132,7 +132,7 @@ namespace Resturant_Mangement_System
             cb.DataSource = dataTable;
             cb.SelectedIndex = -1;
 
-        }*/
-        
+        }
+
     }
 }

@@ -34,17 +34,26 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbcat = new System.Windows.Forms.ComboBox();
+            this.categoryBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.rMSDataSet = new Resturant_Mangement_System.RMSDataSet();
+            this.categoryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rMDatabaseDataSet = new Resturant_Mangement_System.RMDatabaseDataSet();
             this.label4 = new System.Windows.Forms.Label();
-            this.categoryTableAdapter = new Resturant_Mangement_System.RMDatabaseDataSetTableAdapters.categoryTableAdapter();
             this.txtImage = new System.Windows.Forms.PictureBox();
             this.btnBrowse = new System.Windows.Forms.Button();
+            this.rMSDataSet1 = new Resturant_Mangement_System.RMSDataSet1();
+            this.categoryBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.categoryTableAdapter = new Resturant_Mangement_System.RMSDataSet1TableAdapters.categoryTableAdapter();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rMSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rMDatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rMSDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,6 +69,15 @@
             // 
             this.label1.Size = new System.Drawing.Size(191, 29);
             this.label1.Text = "Product Details";
+            // 
+            // btnSave
+            // 
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            // 
+            // btnClose
+            // 
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(223)))), ((int)(((byte)(0)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
             // 
             // txtPrice
             // 
@@ -105,7 +123,7 @@
             // 
             // cbcat
             // 
-            this.cbcat.DataSource = this.categoryBindingSource;
+            this.cbcat.DataSource = this.categoryBindingSource3;
             this.cbcat.DisplayMember = "catName";
             this.cbcat.FormattingEnabled = true;
             this.cbcat.Location = new System.Drawing.Point(31, 370);
@@ -114,15 +132,23 @@
             this.cbcat.TabIndex = 8;
             this.cbcat.ValueMember = "catID";
             // 
+            // categoryBindingSource2
+            // 
+            this.categoryBindingSource2.DataMember = "category";
+            this.categoryBindingSource2.DataSource = this.rMSDataSet;
+            // 
+            // rMSDataSet
+            // 
+            this.rMSDataSet.DataSetName = "RMSDataSet";
+            this.rMSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // categoryBindingSource1
+            // 
+            this.categoryBindingSource1.DataMember = "category";
+            // 
             // categoryBindingSource
             // 
             this.categoryBindingSource.DataMember = "category";
-            this.categoryBindingSource.DataSource = this.rMDatabaseDataSet;
-            // 
-            // rMDatabaseDataSet
-            // 
-            this.rMDatabaseDataSet.DataSetName = "RMDatabaseDataSet";
-            this.rMDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label4
             // 
@@ -133,10 +159,6 @@
             this.label4.Size = new System.Drawing.Size(91, 22);
             this.label4.TabIndex = 7;
             this.label4.Text = "Category";
-            // 
-            // categoryTableAdapter
-            // 
-            this.categoryTableAdapter.ClearBeforeFill = true;
             // 
             // txtImage
             // 
@@ -156,6 +178,20 @@
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // rMSDataSet1
+            // 
+            this.rMSDataSet1.DataSetName = "RMSDataSet1";
+            this.rMSDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // categoryBindingSource3
+            // 
+            this.categoryBindingSource3.DataMember = "category";
+            this.categoryBindingSource3.DataSource = this.rMSDataSet1;
+            // 
+            // categoryTableAdapter
+            // 
+            this.categoryTableAdapter.ClearBeforeFill = true;
             // 
             // frmProductAdd
             // 
@@ -185,10 +221,15 @@
             this.Controls.SetChildIndex(this.btnBrowse, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rMSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rMDatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rMSDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,10 +243,14 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.ComboBox cbcat;
         private System.Windows.Forms.Label label4;
-        private RMDatabaseDataSet rMDatabaseDataSet;
         private System.Windows.Forms.BindingSource categoryBindingSource;
-        private RMDatabaseDataSetTableAdapters.categoryTableAdapter categoryTableAdapter;
         private System.Windows.Forms.Button btnBrowse;
         public System.Windows.Forms.PictureBox txtImage;
+        private System.Windows.Forms.BindingSource categoryBindingSource1;
+        private RMSDataSet rMSDataSet;
+        private System.Windows.Forms.BindingSource categoryBindingSource2;
+        private RMSDataSet1 rMSDataSet1;
+        private System.Windows.Forms.BindingSource categoryBindingSource3;
+        private RMSDataSet1TableAdapters.categoryTableAdapter categoryTableAdapter;
     }
 }
