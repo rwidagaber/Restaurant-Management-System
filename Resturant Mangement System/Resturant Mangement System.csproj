@@ -91,23 +91,11 @@
       <DependentUpon>frmOrders.cs</DependentUpon>
     </Compile>
     <Compile Include="MainClass.cs" />
-    <Compile Include="Model\frmAddCustomer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Model\frmAddCustomer.Designer.cs">
-      <DependentUpon>frmAddCustomer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model\frmCategoryAdd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Model\frmCategoryAdd.Designer.cs">
       <DependentUpon>frmCategoryAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Model\frmCheckout.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Model\frmCheckout.Designer.cs">
-      <DependentUpon>frmCheckout.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\frmStaffAdd.cs">
       <SubType>Form</SubType>
@@ -211,14 +199,8 @@
     <EmbeddedResource Include="View\frmOrders.resx">
       <DependentUpon>frmOrders.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Model\frmAddCustomer.resx">
-      <DependentUpon>frmAddCustomer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Model\frmCategoryAdd.resx">
       <DependentUpon>frmCategoryAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Model\frmCheckout.resx">
-      <DependentUpon>frmCheckout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmProductAdd.resx">
       <DependentUpon>frmProductAdd.cs</DependentUpon>
@@ -237,9 +219,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\frmMenu.rdlc" />
-    <EmbeddedResource Include="Reports\ReportBill.rdlc" />
-    <EmbeddedResource Include="Reports\rptBill.rdlc" />
     <EmbeddedResource Include="SampleView.resx">
       <DependentUpon>SampleView.cs</DependentUpon>
     </EmbeddedResource>
