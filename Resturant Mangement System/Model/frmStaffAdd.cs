@@ -51,10 +51,20 @@ namespace Resturant_Mangement_System.Model
                 txtUsername.Focus();
                 cbRole.SelectedIndex = -1;
                 cbRole.Focus();
+                txtPhone.Text = "";
+                txtPhone.Focus();
+                txtPass.Text = "";
+                txtPass.Focus();
             }
         }
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
-       
+        
+
+
     }
    
 }

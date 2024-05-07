@@ -20,19 +20,21 @@ namespace Resturant_Mangement_System.View
         }
         public void GetData()
         {
-            string qry = "select pID,pName,pPrice,categoryID,c.catName,pImage from product p inner join category c on p.categoryID= c.catID where pName like '%" + txtSearch.Text + "%' ";
+            string qry = "select pID,pName,pPrice,categoryID,c.catName from product p inner join category c on p.categoryID= c.catID where pName like '%" + txtSearch.Text + "%' ";
             ListBox listBox = new ListBox();
             listBox.Items.Add(dgvid);
             listBox.Items.Add(dgvName);
             listBox.Items.Add(dgvprice);
             listBox.Items.Add(dgvcatID);
             listBox.Items.Add(dgvcategory); 
-            listBox.Items.Add(dgvimage);
+            
             MainClass.LoadData(qry, productView, listBox);
         }
 
         private void frmProductView_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'restaurantDataSet2.product' table. You can move, or remove it, as needed.
+            this.productTableAdapter.Fill(this.restaurantDataSet2.product);
             GetData();
         }
         public override void txtSearch_TextChanged(object sender, EventArgs e)
@@ -52,6 +54,8 @@ namespace Resturant_Mangement_System.View
             if (productView.CurrentCell.OwningColumn.Name == "dgvedit")
             {
                 frmProductAdd frm = new frmProductAdd();
+                frm.txtsproductName.Text = productView.CurrentRow.Cells["dgvName"].Value.ToString();
+                frm.txtPrice.Text = productView.CurrentRow.Cells["dgvprice"].Value.ToString();
                 frm.id = Convert.ToInt32(productView.CurrentRow.Cells["dgvid"].Value);
                 frm.cID= Convert.ToInt32(productView.CurrentRow.Cells["dgvcatID"].Value) ;
                 frm.ShowDialog();
@@ -61,6 +65,7 @@ namespace Resturant_Mangement_System.View
             {
                 if (MessageBox.Show("Are you sure to delete this product? ", "Warnnig", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
+
                     int iD = Convert.ToInt32(productView.CurrentRow.Cells["dgvid"].Value);
                     string qry = "Delete from product where pID= " + iD + "";
                     Hashtable ht = new Hashtable();

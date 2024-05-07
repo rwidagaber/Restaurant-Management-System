@@ -84,17 +84,11 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrint.cs">
+    <Compile Include="View\frmOrders.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrint.Designer.cs">
-      <DependentUpon>frmPrint.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPrintBill.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPrintBill.Designer.cs">
-      <DependentUpon>frmPrintBill.cs</DependentUpon>
+    <Compile Include="View\frmOrders.Designer.cs">
+      <DependentUpon>frmOrders.cs</DependentUpon>
     </Compile>
     <Compile Include="MainClass.cs" />
     <Compile Include="Model\frmAddCustomer.cs">
@@ -102,12 +96,6 @@
     </Compile>
     <Compile Include="Model\frmAddCustomer.Designer.cs">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Model\frmBillList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Model\frmBillList.Designer.cs">
-      <DependentUpon>frmBillList.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\frmCategoryAdd.cs">
       <SubType>Form</SubType>
@@ -120,12 +108,6 @@
     </Compile>
     <Compile Include="Model\frmCheckout.Designer.cs">
       <DependentUpon>frmCheckout.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Model\frmPOS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Model\frmPOS.Designer.cs">
-      <DependentUpon>frmPOS.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\frmStaffAdd.cs">
       <SubType>Form</SubType>
@@ -145,28 +127,6 @@
     <Compile Include="Model\frmTableSelect.Designer.cs">
       <DependentUpon>frmTableSelect.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\frmWaiterSelect.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Model\frmWaiterSelect.Designer.cs">
-      <DependentUpon>frmWaiterSelect.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Model\UcProduct.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Model\UcProduct.Designer.cs">
-      <DependentUpon>UcProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PrintBill.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PrintBill.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="printReceipt.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>printReceipt.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -174,25 +134,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="RMDatabaseDataSet.Designer.cs">
+    <Compile Include="RestaurantCategory.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RMDatabaseDataSet.xsd</DependentUpon>
+      <DependentUpon>RestaurantCategory.xsd</DependentUpon>
     </Compile>
-    <Compile Include="RMSDataSet.Designer.cs">
+    <Compile Include="RestaurantCategoryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RMSDataSet.xsd</DependentUpon>
+      <DependentUpon>RestaurantCategoryDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="RMSDataSet1.Designer.cs">
+    <Compile Include="RestaurantDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RMSDataSet1.xsd</DependentUpon>
+      <DependentUpon>RestaurantDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="RMSReceipt.Designer.cs">
+    <Compile Include="RestaurantDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RMSReceipt.xsd</DependentUpon>
+      <DependentUpon>RestaurantDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RestaurantDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RestaurantDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="SampleView.cs">
       <SubType>Form</SubType>
@@ -219,23 +184,11 @@
     <Compile Include="Model\frmProductAdd.Designer.cs">
       <DependentUpon>frmProductAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmKitchenView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmKitchenView.Designer.cs">
-      <DependentUpon>frmKitchenView.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\frmProductView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmProductView.Designer.cs">
       <DependentUpon>frmProductView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\frmReportView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmReportView.Designer.cs">
-      <DependentUpon>frmReportView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmStaffView.cs">
       <SubType>Form</SubType>
@@ -255,26 +208,17 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrint.resx">
-      <DependentUpon>frmPrint.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPrintBill.resx">
-      <DependentUpon>frmPrintBill.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmOrders.resx">
+      <DependentUpon>frmOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmAddCustomer.resx">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Model\frmBillList.resx">
-      <DependentUpon>frmBillList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmCategoryAdd.resx">
       <DependentUpon>frmCategoryAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmCheckout.resx">
       <DependentUpon>frmCheckout.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Model\frmPOS.resx">
-      <DependentUpon>frmPOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmProductAdd.resx">
       <DependentUpon>frmProductAdd.cs</DependentUpon>
@@ -287,12 +231,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmTableSelect.resx">
       <DependentUpon>frmTableSelect.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Model\frmWaiterSelect.resx">
-      <DependentUpon>frmWaiterSelect.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Model\UcProduct.resx">
-      <DependentUpon>UcProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -311,14 +249,8 @@
     <EmbeddedResource Include="View\frmCategoryView.resx">
       <DependentUpon>frmCategoryView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmKitchenView.resx">
-      <DependentUpon>frmKitchenView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\frmProductView.resx">
       <DependentUpon>frmProductView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\frmReportView.resx">
-      <DependentUpon>frmReportView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmStaffView.resx">
       <DependentUpon>frmStaffView.cs</DependentUpon>
@@ -327,28 +259,6 @@
       <DependentUpon>frmTableView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="PrintBill.xsc">
-      <DependentUpon>PrintBill.xsd</DependentUpon>
-    </None>
-    <None Include="PrintBill.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PrintBill.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PrintBill.xss">
-      <DependentUpon>PrintBill.xsd</DependentUpon>
-    </None>
-    <None Include="printReceipt.xsc">
-      <DependentUpon>printReceipt.xsd</DependentUpon>
-    </None>
-    <None Include="printReceipt.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>printReceipt.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="printReceipt.xss">
-      <DependentUpon>printReceipt.xsd</DependentUpon>
-    </None>
     <None Include="Properties\DataSources\frmPrint.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -359,49 +269,60 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="RMDatabaseDataSet.xsc">
-      <DependentUpon>RMDatabaseDataSet.xsd</DependentUpon>
+    <None Include="RestaurantCategory.xsc">
+      <DependentUpon>RestaurantCategory.xsd</DependentUpon>
     </None>
-    <None Include="RMDatabaseDataSet.xsd">
+    <None Include="RestaurantCategory.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RMDatabaseDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>RestaurantCategory.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="RMDatabaseDataSet.xss">
-      <DependentUpon>RMDatabaseDataSet.xsd</DependentUpon>
+    <None Include="RestaurantCategory.xss">
+      <DependentUpon>RestaurantCategory.xsd</DependentUpon>
     </None>
-    <None Include="RMSDataSet.xsc">
-      <DependentUpon>RMSDataSet.xsd</DependentUpon>
+    <None Include="RestaurantCategoryDataSet.xsc">
+      <DependentUpon>RestaurantCategoryDataSet.xsd</DependentUpon>
     </None>
-    <None Include="RMSDataSet.xsd">
+    <None Include="RestaurantCategoryDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RMSDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>RestaurantCategoryDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="RMSDataSet.xss">
-      <DependentUpon>RMSDataSet.xsd</DependentUpon>
+    <None Include="RestaurantCategoryDataSet.xss">
+      <DependentUpon>RestaurantCategoryDataSet.xsd</DependentUpon>
     </None>
-    <None Include="RMSDataSet1.xsc">
-      <DependentUpon>RMSDataSet1.xsd</DependentUpon>
+    <None Include="RestaurantDataSet.xsc">
+      <DependentUpon>RestaurantDataSet.xsd</DependentUpon>
     </None>
-    <None Include="RMSDataSet1.xsd">
+    <None Include="RestaurantDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RMSDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>RestaurantDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="RMSDataSet1.xss">
-      <DependentUpon>RMSDataSet1.xsd</DependentUpon>
+    <None Include="RestaurantDataSet.xss">
+      <DependentUpon>RestaurantDataSet.xsd</DependentUpon>
     </None>
-    <None Include="RMSReceipt.xsc">
-      <DependentUpon>RMSReceipt.xsd</DependentUpon>
+    <None Include="RestaurantDataSet1.xsc">
+      <DependentUpon>RestaurantDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="RMSReceipt.xsd">
+    <None Include="RestaurantDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RMSReceipt.Designer.cs</LastGenOutput>
+      <LastGenOutput>RestaurantDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="RMSReceipt.xss">
-      <DependentUpon>RMSReceipt.xsd</DependentUpon>
+    <None Include="RestaurantDataSet1.xss">
+      <DependentUpon>RestaurantDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="RestaurantDataSet2.xsc">
+      <DependentUpon>RestaurantDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="RestaurantDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RestaurantDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RestaurantDataSet2.xss">
+      <DependentUpon>RestaurantDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

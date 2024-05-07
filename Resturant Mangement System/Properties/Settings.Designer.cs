@@ -44,5 +44,16 @@ namespace Resturant_Mangement_System.Properties {
                 return ((string)(this["RMSConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=camellia;Initial Catalog=Restaurant;Integrated Security=True;TrustSer" +
+            "verCertificate=True")]
+        public string RestaurantConnectionString {
+            get {
+                return ((string)(this["RestaurantConnectionString"]));
+            }
+        }
     }
 }

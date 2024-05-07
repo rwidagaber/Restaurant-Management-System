@@ -26,13 +26,6 @@ namespace Resturant_Mangement_System
         {
             
         }
-
-        
-
-        
-
-        
-
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -46,6 +39,11 @@ namespace Resturant_Mangement_System
         
 
         public virtual void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public virtual void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

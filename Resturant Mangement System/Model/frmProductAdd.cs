@@ -18,17 +18,17 @@ namespace Resturant_Mangement_System.View
         public frmProductAdd()
         {
             InitializeComponent();
+            
         }
         public int id = 0;
         public int cID = 0;
-        Byte[] imageByteArray;
-
+        
         private void frmProductAdd_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'restaurantCategoryDataSet.category' table. You can move, or remove it, as needed.
+            this.categoryTableAdapter.Fill(this.restaurantCategoryDataSet.category);
             // TODO: This line of code loads data into the 'rMSDataSet1.category' table. You can move, or remove it, as needed.
-            this.categoryTableAdapter.Fill(this.rMSDataSet1.category);
-            // TODO: This line of code loads data into the 'rMSDataSet1.category' table. You can move, or remove it, as needed.
-            this.categoryTableAdapter.Fill(this.rMSDataSet1.category);
+            cbcat.SelectedIndex = -1;
 
             if (cID > 0)
             {
@@ -43,12 +43,12 @@ namespace Resturant_Mangement_System.View
             //insert category
             if (id == 0)
             {
-                qry = "Insert into product Values(@Name,@Price,@cat,@img)";
+                qry = "Insert into product Values(@Name,@Price,@cat)";
             }
             //Update category
             else
             {
-                qry = "Update product Set pName = @Name,pPrice = @Phone, categoryID=@cat , pImage=@image where pID= @id";
+                qry = "Update product Set pName = @Name,pPrice = @Price, categoryID=@cat where pID= @id";
 
             }
 
@@ -56,13 +56,8 @@ namespace Resturant_Mangement_System.View
             hashtable.Add("@id", id);
             hashtable.Add("@Name", txtsproductName.Text);
             hashtable.Add("@Price", txtPrice.Text);
-            hashtable.Add("@cat",Convert.ToInt32( cbcat.SelectedValue));
+            hashtable.Add("@cat", Convert.ToInt32(cbcat.SelectedValue));
 
-            Image img= new Bitmap(txtImage.Image);
-            MemoryStream memoryStream = new MemoryStream();
-            img.Save(memoryStream,System.Drawing.Imaging.ImageFormat.Png);
-            imageByteArray = memoryStream.ToArray();
-            hashtable.Add("@img", imageByteArray);
 
 
 
@@ -81,18 +76,7 @@ namespace Resturant_Mangement_System.View
         }
       
         
-        string filePath = "";
-        private void btnBrowse_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "images(.jpg,.png)|* .png; *.jpg";
-            if(ofd.ShowDialog() == DialogResult.OK) { 
-                filePath = ofd.FileName;
-                txtImage.Image = new Bitmap(filePath);
-
-
-            }
-        }
+        
        /* private void ForUpdatelLoadData()
         {
             string qry = @"select * from product where pID= " + id + "";
