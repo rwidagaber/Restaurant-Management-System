@@ -88,9 +88,7 @@ D:\level_3\2nd term\Visual programming\Project\RM\Restaurant-Management-System\R
 D:\level_3\2nd term\Visual programming\Project\RM\Restaurant-Management-System\Resturant Mangement System\obj\Debug\Resturant_Mangement_System.frmHome.resources
 D:\level_3\2nd term\Visual programming\Project\RM\Restaurant-Management-System\Resturant Mangement System\obj\Debug\Resturant_Mangement_System.HomeFrm.resources
 D:\level_3\2nd term\Visual programming\Project\RM\Restaurant-Management-System\Resturant Mangement System\obj\Debug\Resturant_Mangement_System.frmOrders.resources
-D:\level_3\2nd term\Visual programming\Project\RM\Restaurant-Management-System\Resturant Mangement System\obj\Debug\Resturant_Mangement_System.Model.frmAddCustomer.resources
 D:\level_3\2nd term\Visual programming\Project\RM\Restaurant-Management-System\Resturant Mangement System\obj\Debug\Resturant_Mangement_System.Model.frmCategoryAdd.resources
-D:\level_3\2nd term\Visual programming\Project\RM\Restaurant-Management-System\Resturant Mangement System\obj\Debug\Resturant_Mangement_System.Model.frmCheckout.resources
 D:\level_3\2nd term\Visual programming\Project\RM\Restaurant-Management-System\Resturant Mangement System\obj\Debug\Resturant_Mangement_System.View.frmProductAdd.resources
 D:\level_3\2nd term\Visual programming\Project\RM\Restaurant-Management-System\Resturant Mangement System\obj\Debug\Resturant_Mangement_System.Model.frmStaffAdd.resources
 D:\level_3\2nd term\Visual programming\Project\RM\Restaurant-Management-System\Resturant Mangement System\obj\Debug\Resturant_Mangement_System.Model.frmTableAdd.resources
