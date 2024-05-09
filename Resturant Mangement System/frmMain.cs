@@ -19,8 +19,9 @@ namespace Resturant_Mangement_System
         public HomeFrm()
         {
             InitializeComponent();
+
         }
-        
+
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -35,12 +36,13 @@ namespace Resturant_Mangement_System
 
         private void Maxmizebtn_Click(object sender, EventArgs e)
         {
-            
+            WindowState = FormWindowState.Minimized;
         }
 
         private void HomeFrm_Load(object sender, EventArgs e)
         {
-         //   Usernamelbl.Text = MainClass.USER;
+            
+            //   Usernamelbl.Text = MainClass.USER;
         }
 
         private void HomeBtn_MouseClick(object sender, MouseEventArgs e)
@@ -52,13 +54,14 @@ namespace Resturant_Mangement_System
         {
             foreach (Control c in BtnPanel.Controls)
             {
-                c.BackColor = Color.FromArgb(25,25,25);
+                if(c==pictureBox5)continue;
+                c.BackColor = ColorTranslator.FromHtml("#4ab6e6");
                 c.ForeColor = Color.White;
             }
             // click setting
             Control click=(Control)sender;
-            click.BackColor = Color.FromArgb(255, 223, 0);
-            click.ForeColor=Color.Black;
+            click.BackColor = ColorTranslator.FromHtml("#157eb4");
+            click.ForeColor=Color.White;
         }
 
         private void HomeBtn_Click(object sender, EventArgs e)
@@ -93,24 +96,15 @@ namespace Resturant_Mangement_System
 
         private void POSbtn_Click(object sender, EventArgs e)
         {
-            frmPOS frm = new frmPOS();
-            frm.ShowDialog();
-            this.Hide();
+            Btn_setting(sender, null);
+            frmOrders frm = new frmOrders();
+            AddControl(frm);
             
         }
 
-        private void Kitchenbtn_Click(object sender, EventArgs e)
-        {
-            Btn_setting(sender, null);
-            AddControl(new View.frmKitchenView());
-        }
+       
 
-        private void Reportsbtn_Click(object sender, EventArgs e)
-        {
-            Btn_setting(sender, null);
-            AddControl(new View.frmReportView());
-
-        }
+       
 
         private void Settingbtn_Click(object sender, EventArgs e)
         {
@@ -133,5 +127,7 @@ namespace Resturant_Mangement_System
         {
 
         }
+
+        
     }
 }
